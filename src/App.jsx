@@ -14,7 +14,17 @@ function App() {
       <a href="https://reactjs.org/docs/components-and-props.html">Falls ihr mehr Infos zu React haben wollt und jetzt direkt "advanced features" lernen wollt: Hier ist die Dokumentationsseite</a>
       <p>Hier werdet ihr sehen, dass diese function "App" also ein "Component" ist</p>
       <p>Den Rest schafft ihr sicherlich auch selbst :)</p>
+      <Umbaerto />
+      guck mal krass oder
     </div>
+  );
+
+  
+}
+
+function Umbaerto() {
+  return (
+    <p>^^</p>
   );
 }
 
