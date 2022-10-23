@@ -1,0 +1,20 @@
+.landingSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 150px;
+  border-bottom: 5px solid #4A8692;
+}
+.landingSection h1 {
+  font-size: 7em;
+  color: rgba(156, 149, 123, 0.78);
+}
+.landingSection p {
+  color: #4A8692;
+}
+.landingSection span {
+  display: block;
+}
+.landingSection img { 
+  width: 40%;
+}
