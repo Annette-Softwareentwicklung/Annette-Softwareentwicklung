@@ -1,5 +1,5 @@
 import { Footer, Header } from "./components"; 
-import { LandingSection } from "./sections/landing-section/landing-section";
+import { LandingSection } from "./sections";
 // durch die index.js dateien, die das Exportieren der Inhalte zusammenbündelt, damit man dann alle components von "./components" importieren kann
 
 
