@@ -6,8 +6,8 @@
   border-bottom: 5px solid #4A8692;
 }
 .landingSection h1 {
-  font-size: 7em;
-  color: rgba(156, 149, 123, 0.78);
+  font-size: 6em;
+  color: rgb(168, 166, 152);
 }
 .landingSection p {
   color: #4A8692;
@@ -17,4 +17,24 @@
 }
 .landingSection img { 
   width: 40%;
+}
+
+@media screen and (max-width: 1000px) {
+  .landingSection img {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+    width: 60%;
+    right: 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  .landingSection h1 {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 450px) {
+  .landingSection h1 {
+    font-size: 3em;
+  }
 }
