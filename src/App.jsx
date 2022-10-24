@@ -13,8 +13,6 @@ function App() {
       <Footer />
     </>
   );
-
-  
 }
 
 function Umbaerto() {
