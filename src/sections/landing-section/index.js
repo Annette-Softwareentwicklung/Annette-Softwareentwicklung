@@ -1,1 +1,1 @@
-export * from "landing-section.jsx"
+export * from "./landing-section.jsx"
