@@ -1,0 +1,40 @@
+.introductionSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 150px;
+  border-bottom: 5px solid #4A8692;
+}
+.introductionSection h2 {
+  font-size: 6em;
+  color: #4A8692;
+}
+.introductionSection p {
+  color: #4A8692;
+}
+.introductionSection span {
+  display: block;
+}
+.introductionSection img { 
+  width: 40%;
+}
+
+@media screen and (max-width: 1000px) {
+  .introductionSection img {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+    width: 60%;
+    right: 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  .introductionSection h1 {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 450px) {
+  .introductionSection h1 {
+    font-size: 3em;
+  }
+}
