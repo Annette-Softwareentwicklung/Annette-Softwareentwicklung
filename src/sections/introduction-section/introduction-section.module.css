@@ -6,17 +6,27 @@
   border-bottom: 5px solid #4A8692;
 }
 .introductionSection h2 {
-  font-size: 6em;
+  font-size: 3em;
+  font-weight: 400;
   color: #4A8692;
 }
 .introductionSection p {
-  color: #4A8692;
+  color: #000000;
 }
 .introductionSection span {
   display: block;
 }
-.introductionSection img { 
+ img { 
   width: 40%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-item {
+  display: flex;
 }
 
 @media screen and (max-width: 1000px) {
