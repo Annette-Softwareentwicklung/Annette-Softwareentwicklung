@@ -23,10 +23,8 @@
 .flex {
   display: flex;
   flex-direction: row;
-}
-
-.flex-item {
-  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 @media screen and (max-width: 1000px) {
