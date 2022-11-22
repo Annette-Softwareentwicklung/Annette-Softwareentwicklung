@@ -1,0 +1,28 @@
+
+// ! Das importieren von css modules
+import styles from "./team-section.module.css";
+import logo from "./../../assets/images/logo.png";
+import cdialogo from "./../../assets/images/cdia_v_1_0_dark2x.png";
+
+export function TeamSection() {
+  return <section className={styles.teamSection}>
+    <article>
+      <h2>Wir sind...</h2>
+      <p>...eine Arbeitsgemeinschaft am Annette-von-Droste-Hülshoff-Gymnasium</p>
+      <div></div>
+      <div className={styles.flex}>
+        <div>
+          <p>
+            ...und Teil des Projekts "Community der Informatischen AGs", einer Programmier-Gemeinschaft mit AGs am Koblenzer, Schloß und Annette-von-Droste-Hülshoff Gymnasium.
+            <br/>
+            <br/>
+            Mehr Informationen dazu <a href="#">hier</a>
+          </p>
+        </div>
+        <div className={styles.flexitemlogocdia}>
+          <img src={cdialogo} alt="Community der Informatischen Ag's" />
+        </div>
+      </div>
+    </article>
+  </section>
+}
