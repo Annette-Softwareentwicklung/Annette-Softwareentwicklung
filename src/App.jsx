@@ -15,10 +15,4 @@ function App() {
   );
 }
 
-function Umbaerto() {
-  return (
-    <p>^^</p>
-  );
-}
-
 export default App;
