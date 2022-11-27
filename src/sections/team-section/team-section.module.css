@@ -12,13 +12,7 @@
 }
 .teamSection p {
   color: #000000;
-  font-size: 2.25em;
   text-decoration: none;
-}
-
-.teamSection p > a {
-  text-decoration: none;
-  color: #4A8692;
 }
 
 .teamSection span {
@@ -43,16 +37,6 @@
 
 .flexitemlogocdia > img {
   width: 20em;
-}
-
-@media screen and (max-width: 1000px) {
-  .teamSection img {
-    position: absolute;
-    z-index: -1;
-    opacity: 0.2;
-    width: 60%;
-    right: 0;
-  }
 }
 @media screen and (max-width: 750px) {
   .teamSection h1 {

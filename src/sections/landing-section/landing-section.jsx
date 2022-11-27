@@ -11,7 +11,7 @@ export function LandingSection() {
         <span>für moderne</span> 
         <span>Zukunft</span>
       </h1>
-      <p>Annette-Softwareentwicklung, Ein Projekt der Community der Informatischen AGs</p>
+      <p>Die Annette-Softwareentwicklung - CdIA</p>
     </article>
     <img src={logo} alt="Logo der Annette-Softwareentwicklungs-AG" />
   </section>
