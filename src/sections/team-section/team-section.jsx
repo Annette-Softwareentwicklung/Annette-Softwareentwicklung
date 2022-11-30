@@ -20,7 +20,9 @@ export function TeamSection() {
           </p>
         </div>
         <div className={styles.flexitemlogocdia}>
-          <img src={cdialogo} alt="Community der Informatischen Ag's" />
+          <a href="https://www.community-inf-ag.de">
+            <img src={cdialogo} alt="Community der Informatischen Ag's" />
+          </a>
         </div>
       </div>
     </article>
