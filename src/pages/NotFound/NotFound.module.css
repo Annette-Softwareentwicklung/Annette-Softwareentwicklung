@@ -1,0 +1,13 @@
+.section {
+  height: 100vh;
+}
+.center {
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Bahnschrift' , sans-serif;
+    font-size: 15em;
+}

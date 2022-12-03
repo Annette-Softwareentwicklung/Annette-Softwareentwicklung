@@ -1,1 +1,1 @@
-export * from "./team-section.jsx"
+export * from "./team-section.jsx";
