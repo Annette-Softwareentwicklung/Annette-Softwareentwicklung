@@ -16,11 +16,13 @@ export function TeamSection() {
             ...und Teil des Projekts "Community der Informatischen AGs", einer Programmier-Gemeinschaft mit AGs am Koblenzer, Schloß und Annette-von-Droste-Hülshoff Gymnasium.
             <br/>
             <br/>
-            Mehr Informationen dazu <a href="#">hier</a>
+            Mehr Informationen dazu <a href="https://www.community-inf-ag.de">hier</a>
           </p>
         </div>
         <div className={styles.flexitemlogocdia}>
-          <img src={cdialogo} alt="Community der Informatischen Ag's" />
+          <a href="https://www.community-inf-ag.de">
+            <img src={cdialogo} alt="Community der Informatischen Ag's" />
+          </a>
         </div>
       </div>
     </article>
