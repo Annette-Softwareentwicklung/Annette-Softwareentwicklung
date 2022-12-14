@@ -7,7 +7,7 @@ import styles from "./home.module.css";
 export function Home() {
   return <>
       <Header />
-      <main className={styles.main}>
+      <main>
           <LandingSection />
           <TeamSection />
       </main>

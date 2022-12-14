@@ -5,9 +5,15 @@
     display: grid;
     place-items: center;
     height: 100%;
+    text-align: center;
 }
 
-h1 {
+.center > div > h1 {
     font-family: 'Bahnschrift' , sans-serif;
     font-size: 15em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
