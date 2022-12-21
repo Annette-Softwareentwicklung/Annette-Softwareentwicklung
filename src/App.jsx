@@ -9,8 +9,8 @@ function App() {
       <Header />
       <main>
         <LandingSection />
-        <ProjectsSection />
         <TeamSection />
+        <ProjectsSection />
       </main>
       <Footer />
     </>
