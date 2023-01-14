@@ -1,0 +1,16 @@
+.projectsSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 150px;
+  border-bottom: 5px solid #4A8692;
+}
+.projectsSection h2 {
+  font-size: 3em;
+  font-weight: 400;
+  color: #4A8692;
+}
+.projectsSection p {
+  color: #000000;
+  text-decoration: none;
+}
