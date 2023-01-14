@@ -42,6 +42,13 @@
   .teamSection h1 {
     font-size: 4em;
   }
+  .teamSection .flex {
+    flex-direction: column;
+  }
+  .flexitemlogocdia {
+    text-align: center;
+    flex-basis: 0;
+  }
 }
 @media screen and (max-width: 450px) {
   .teamSection h1 {
