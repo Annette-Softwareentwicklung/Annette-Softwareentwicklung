@@ -5,7 +5,7 @@ import styles from "./ablauf-section.module.css";
 export function AblaufSection() {
   return <section className={styles.ablaufSection}>
     <article>
-      <h2><center>Ablauf</center></h2>
+      <h2><center>Terminplan</center></h2>
       <p>
         <br />
         In der “Annette-Softwareentwicklung” treffen wir uns regelmäßig jeden Mittwoch (16-17 Uhr) per Discord online und besprechen unsere Fortschritte.
