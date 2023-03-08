@@ -2,3 +2,4 @@
 export * from "./landing-section"
 export * from "./team-section"
 export * from "./projects-section"
+export * from "./ablauf-section"
