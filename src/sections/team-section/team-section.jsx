@@ -1,11 +1,13 @@
 
 // ! Das importieren von css modules
 import styles from "./team-section.module.css";
+import globalStyles from "./../../globals.module.css";
 import logo from "./../../assets/images/logo.png";
 import cdialogo from "./../../assets/images/cdia_v_1_0_dark2x.png";
+import cn from "classnames";
 
 export function TeamSection() {
-  return <section className={styles.teamSection}>
+  return <section className={cn(styles.teamSection, globalStyles.standardSection)}>
     <article>
       <h2>Wir sind...</h2>
       <p>...eine Arbeitsgemeinschaft am Annette-von-Droste-Hülshoff-Gymnasium</p>

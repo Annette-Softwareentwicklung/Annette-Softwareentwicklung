@@ -1,0 +1,11 @@
+.greyHeading {
+  font-size: 3em;
+  font-weight: 400;
+  color: #B2AC98;
+  text-align: center;
+}
+
+.standardSection {
+  border-bottom: 5px solid #4A8692;
+  padding-bottom: 150px;
+}

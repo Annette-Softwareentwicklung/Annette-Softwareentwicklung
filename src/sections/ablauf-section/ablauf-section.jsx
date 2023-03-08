@@ -1,11 +1,14 @@
 
 // ! Das importieren von css modules
 import styles from "./ablauf-section.module.css";
+import globalStyles from "./../../globals.module.css";
+
+import cn from "classnames";
 
 export function AblaufSection() {
-  return <section className={styles.ablaufSection}>
+  return <section className={cn(styles.ablaufSection, globalStyles.standardSection)}>
     <article>
-      <h2><center>Terminplan</center></h2>
+      <h2 className={globalStyles.greyHeading}>Terminplan</h2>
       <p>
         <br />
         In der “Annette-Softwareentwicklung” treffen wir uns regelmäßig jeden Mittwoch (16-17 Uhr) per Discord online und besprechen unsere Fortschritte.

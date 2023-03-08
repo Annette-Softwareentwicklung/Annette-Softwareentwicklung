@@ -18,6 +18,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  overflow-x: hidden;
 }
 body main {
   padding-inline: 300px;
@@ -28,6 +30,7 @@ h2 {
   padding-top: 2em;
   color: #4A8692;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
