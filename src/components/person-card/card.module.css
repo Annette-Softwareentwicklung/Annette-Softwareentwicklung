@@ -1,0 +1,30 @@
+.card {
+
+  width: 15vw;
+  background-color: black;
+  position: relative;
+
+  aspect-ratio: 3 / 4;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: 20% 50%;
+}
+.title {
+  position: absolute;
+  width: 80%;
+  bottom: 0;
+  z-index: 3;
+  background-color: rgba(80, 80, 80, 0.55); 
+  padding: 20px;
+}
+.title p, .title b {
+  font-size: 1.3rem;
+  color: white;
+}

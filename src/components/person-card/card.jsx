@@ -1,8 +1,8 @@
-
+import styles from "./card.module.css"
 
 export function Card({name, title, imgUrl}) {
     return <section>
-        <div className={"card-container"}>
+        <div className={styles.card}>
             <CardTitle name={name} title={title}/>
             <CardImage picture={imgUrl}/>
         </div>
@@ -10,14 +10,12 @@ export function Card({name, title, imgUrl}) {
 }
 
 function CardImage({picture}){
-    return <div>
-        <img src={picture} alt={''} />
-    </div>
+    return <img className={styles.image} src={picture} alt={''} />;
 }
 
 function CardTitle({name,title}){
-    return <div>
-        <h2>{name}</h2>
-        <h2>{title}</h2>
+    return <div className={styles.title}>
+        <b>{name}</b>
+        <p>{title}</p>
     </div>
 }
