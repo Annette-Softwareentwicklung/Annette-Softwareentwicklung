@@ -1,0 +1,19 @@
+.greyHeading {
+  font-size: 2em;
+  font-weight: 400;
+  color: #B2AC98;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.standardSection {
+  border-bottom: 5px solid #4A8692;
+  padding-bottom: 150px;
+}
+
+.biggerSection {
+  width: 100vw;
+  position: relative;
+
+  left: calc(-1 * var(--page-padding));
+}

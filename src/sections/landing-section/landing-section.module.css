@@ -7,6 +7,7 @@
 }
 .landingSection h1 {
   font-size: 5em;
+  font-weight: 300;
   color: rgb(168, 166, 152);
 }
 .landingSection p {

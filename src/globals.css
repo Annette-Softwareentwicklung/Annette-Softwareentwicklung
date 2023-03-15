@@ -11,6 +11,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --page-padding: 200px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -18,16 +22,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  overflow-x: hidden;
 }
 body main {
-  padding-inline: 300px;
+  overflow-x: hidden;
+  padding-inline: var(--page-padding);
 }
 
+
 h2 {
-  font-size: 1em;
+  font-size: 2em;
   padding-top: 2em;
   color: #4A8692;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -35,7 +44,7 @@ code {
 }
 
 p, b, i {
-  font-size: 1.8em;
+  font-size: 1.3em;
 }
 a {
   text-decoration: none;
@@ -43,12 +52,12 @@ a {
 }
 
 @media screen and (max-width: 1300px) {
-  body main {
-    padding: 100px;
+  :root {
+    --page-padding: 100px;
   }
 }
 @media screen and (max-width: 1100px) {
-  body main {
-    padding: 10%;
+  :root {
+    --page-padding: 10%;
   }
 }
