@@ -30,8 +30,9 @@ body main {
   padding-inline: var(--page-padding);
 }
 
+
 h2 {
-  font-size: 1em;
+  font-size: 2em;
   padding-top: 2em;
   color: #4A8692;
 }
@@ -43,7 +44,7 @@ code {
 }
 
 p, b, i {
-  font-size: 1.8em;
+  font-size: 1.3em;
 }
 a {
   text-decoration: none;
