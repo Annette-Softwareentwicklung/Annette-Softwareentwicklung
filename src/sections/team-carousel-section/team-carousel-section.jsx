@@ -11,10 +11,11 @@ import elias from "./../../assets/images/team/Elias.JPG";
 import nikos from "./../../assets/images/team/Nikos.JPG";
 import yonas from "./../../assets/images/team/Yonas.JPG";
 import cn from "classnames";
+import { DAS_TEAM } from "../../util/constants";
 
 export function TeamCarousel() {
 
-  return <section className={globalStyles.standardSection}>
+  return <section className={globalStyles.standardSection} id={DAS_TEAM}>
     <h2 className={globalStyles.greyHeading}>Das Team</h2>
     <div className={cn(styles.carousel, globalStyles.biggerSection)}>
       <section className={styles.grid}>
