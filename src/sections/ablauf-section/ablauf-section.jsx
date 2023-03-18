@@ -4,9 +4,10 @@ import styles from "./ablauf-section.module.css";
 import globalStyles from "./../../globals.module.css";
 
 import cn from "classnames";
+import { TERMIN_PLAN } from "../../util/constants";
 
 export function AblaufSection() {
-  return <section className={cn(styles.ablaufSection, globalStyles.standardSection)}>
+  return <section className={cn(styles.ablaufSection, globalStyles.standardSection)} id={TERMIN_PLAN}>
     <article>
       <h2 className={globalStyles.greyHeading}>Terminplan</h2>
       <p>
