@@ -10,7 +10,10 @@ export function ProjectsSection() {
   return <section className={cn(styles.projectsSection, globalStyles.standardSection)} id={PORTFOLIO}>
     <article>
       <h2>Wir arbeiten...</h2>
-      <p>...an Software-Projekten - Mobile Applikationen, Webseiten, Webapplikationen und Backend Services - für unsere Schule</p>
+      <p>
+        ...an Software-Projekten - Mobile Applikationen, Webseiten, Webapplikationen und Backend Services - für unsere Schule. 
+        Für Schülerinnen und Schüler, Lehrerinnen und Lehrer.
+      </p>
     </article>
   </section>
 }

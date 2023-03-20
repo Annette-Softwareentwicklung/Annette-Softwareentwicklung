@@ -3,7 +3,7 @@
   z-index: 99999999;
   top: 0;
   width: 100%;
-  padding: 70px var(--page-padding) 30px var(--page-padding);
+  padding: 40px var(--page-padding) 15px var(--page-padding);
   display: flex;
   justify-content: space-between;
   transition: background-color 0.4s ease-in-out;
