@@ -10,9 +10,9 @@
 
 .teamimage {
   margin-block: 100px;
-  height: 500px;
+  width: 100%;
   object-fit: cover;
-  object-position: 0% 0%;
+  
 }
 
 .teamSection span {

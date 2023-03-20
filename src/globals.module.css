@@ -14,6 +14,5 @@
 .biggerSection {
   width: 100vw;
   position: relative;
-
   left: calc(-1 * var(--page-padding));
 }

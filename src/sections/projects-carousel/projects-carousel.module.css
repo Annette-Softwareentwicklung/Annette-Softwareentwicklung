@@ -1,3 +1,15 @@
+.heading {
+  align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.hinweis {
+  opacity: 0.2;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
 .carousel {
   width: fit-content;
   display: flex;
@@ -30,4 +42,13 @@
   align-items: center;
   margin-top: 100px;
   gap: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+  .carouselController {
+    gap: 10px;
+  }
+  .caretLeft, .caretRight {
+    margin: 0;
+  }
 }

@@ -22,3 +22,17 @@
   margin: 0;
 }
 
+@media screen and (max-width: 1000px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+@media screen and (max-width: 340px) {
+  .header ul {
+    gap: 30px;
+  }
+}
+
