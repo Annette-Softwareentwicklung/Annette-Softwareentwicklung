@@ -1,4 +1,4 @@
-import { CaretLeft, CaretRight, Dot } from "@phosphor-icons/react"
+import { CaretLeft, CaretRight, Dot, Mouse } from "@phosphor-icons/react"
 import cn from "classnames"
 import { useEffect, useState } from "react"
 import { ProjectCard } from "../../components"
@@ -10,7 +10,27 @@ export const ProjectsCarousel = () => {
 
   const [selectedIndex, setSelectedIndex] = useState(2)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-  const setWindowEvent = () => setWindowWidth(window.innerWidth)
+  // Abspeichern dieser Daten in Javascript, da diese Zahlen für die Berechnung der Position essentiell sind
+  const initialCardWidth = 300;
+  const initialCardIncrease = 150;
+  const initialCardGap = 50;
+  const [cardWidth, setCardWidth] = useState(initialCardWidth)
+  const [cardWidthIncrease, setCardWidthIncrease] = useState(initialCardIncrease) // um so viel wird die Karte größer wenn sie ausgewählt wird
+  const [cardGap, setCardGap] = useState(initialCardGap)
+  // me when Mathe-LK
+  const offsetLeft = windowWidth / 2 - (selectedIndex * (cardWidth + cardGap) + (cardWidth + cardWidthIncrease) / 2)
+
+  const setWindowEvent = () => { 
+    if (window.innerWidth < 680) {
+      setCardWidth(250)
+      setCardWidthIncrease(0)
+    } else {
+      setCardWidth(initialCardWidth)
+      setCardWidthIncrease(initialCardIncrease)
+    }
+
+    setWindowWidth(window.innerWidth) 
+  }
 
 
   useEffect(() => {
@@ -69,17 +89,11 @@ export const ProjectsCarousel = () => {
     },
   ]
 
-  // Abspeichern dieser Daten in Javascript, da diese Zahlen für die Berechnung der Position essentiell sind
-  const cardWidth = 300;
-  const cardWidthIncrease = 150; // um so viel wird die Karte größer wenn sie ausgewählt wird
-  const cardGap = 50;
-  // me when Mathe-LK
-  const offsetLeft = windowWidth / 2 - (selectedIndex * (cardWidth + cardGap) + (cardWidth + cardWidthIncrease) / 2)
-
 
   const allProjects = allProjectsData.map((entry, index) => {
     return <ProjectCard 
       key={index} 
+      onClick={() => setSelectedIndex(index)}
       position={entry.position}
       pHeight={entry.height}
       title={entry.title}
@@ -97,7 +111,8 @@ export const ProjectsCarousel = () => {
   return <section className={globalStyles.standardSection}>
     <section className={globalStyles.biggerSection}>
 
-      <h2 className={globalStyles.greyHeading}>Portfolio</h2>
+      <h2 className={cn(globalStyles.greyHeading, styles.heading)}>Portfolio</h2>
+      <p className={styles.hinweis}>- anclicken -</p>
 
       <div 
         className={styles.carousel}
@@ -117,6 +132,7 @@ export const ProjectsCarousel = () => {
         />
         {
           allProjects.map((_, index) => <div
+            key={index}
             style={{
               backgroundColor: selectedIndex == index ? "black" : "lightgrey"
             }}

@@ -8,12 +8,27 @@
   width: 100%;
   position: absolute;
   background-color: #DFEBED;
+  cursor: pointer;
 }
 
 .projectCard .description {
-  padding: 20px;
+  width: 240px;
+  margin-top: 50px;
+  margin-inline: auto;
 }
 .description h3 {
+  text-align: center;
   font-size: 1.5em;
   margin-bottom: 10px;
 }
+.description p {
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.projectCard:hover .description p, .projectCard:focus .description p {
+  opacity: 1;
+}
+

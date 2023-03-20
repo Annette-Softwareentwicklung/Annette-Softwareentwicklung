@@ -6,7 +6,17 @@ import styles from "./projectCard.module.css"
  * @param {height} 0 - 1 (Kommazahl) 
  */
 
-export const ProjectCard = ({position, pHeight, imageUrl, link, title, description, selected, width, widthIncrease}) => {
+export const ProjectCard = ({
+  onClick,
+  position,
+  pHeight, 
+  imageUrl, 
+  title, 
+  description, 
+  selected, 
+  width, 
+  widthIncrease
+}) => {
 
   return <div className={styles.wrapper} style={{
     width: selected ? width + widthIncrease : width,
@@ -18,9 +28,7 @@ export const ProjectCard = ({position, pHeight, imageUrl, link, title, descripti
         height: `${pHeight * 100}%`,
         [position]: 0
       }}
-      onClick={() => {
-        if (link != undefined) window.location.href = link
-      }}
+      onClick={() => onClick()}
     >
       <div className={styles.description}>
         <h3>{title}</h3>
