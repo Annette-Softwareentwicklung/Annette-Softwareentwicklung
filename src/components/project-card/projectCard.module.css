@@ -1,0 +1,19 @@
+.wrapper {
+  position: relative;
+  height: 500px;
+  transition: width 0.2s ease 0.1s;
+}
+.projectCard {
+  right: 0;
+  width: 100%;
+  position: absolute;
+  background-color: #DFEBED;
+}
+
+.projectCard .description {
+  padding: 20px;
+}
+.description h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
