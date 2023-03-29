@@ -1,10 +1,17 @@
-import { CaretLeft, CaretRight, Dot, Mouse } from "@phosphor-icons/react"
+import { CaretLeft, CaretRight } from "@phosphor-icons/react"
 import cn from "classnames"
 import { useEffect, useState } from "react"
 import { ProjectCard } from "../../components"
 import globalStyles from "./../../globals.module.css"
 
 import styles from "./projects-carousel.module.css"
+
+import annetteApp from "./../../assets/images/projects/annette_app.svg"
+import onlineFormular from "./../../assets/images/projects/online_formular.png"
+import website from "./../../assets/images/projects/website.png"
+import adventskalender from "./../../assets/images/projects/adventskalender.png"
+import onlinebibliothek from "./../../assets/images/projects/onlinebibliothek.png"
+import svseite from "./../../assets/images/projects/svseite.png"
 
 export const ProjectsCarousel = () => {
 
@@ -50,42 +57,42 @@ export const ProjectsCarousel = () => {
       height: 0.85,
       title: "Antragsformular Förderverein",
       description: "Eine digitales Formular für den Förderverein. Papier sparen!",
-      imageUrl: ""
+      imageUrl: onlineFormular
     },
     {
       position: "bottom",
       height: 0.8,
       title: "Webseite der SV",
-      description: "Eine Webseite für die Schüler*innenvertretung am Annette-Gymnasium.",
-      imageUrl: ""
+      description: "Eine Webseite für die SV am Annette-Gymnasium.",
+      imageUrl: svseite
     },
     {
       position: "top",
       height: 1,
       title: "Annette-App",
       description: "Die Offizielle Applikation der Schule für Schülerinnen und Schüler",
-      imageUrl: ""
+      imageUrl: annetteApp
     },
     {
       position: "top",
       height: 0.8,
       title: "Online Lehrerbibliothek",
       description: "Eine digitale Sammlung von Büchern am Annette für Lehrerinnen und Lehrer",
-      imageUrl: ""
+      imageUrl: onlinebibliothek
     },
     {
       position: "bottom",
       height: 0.9,
       title: "Unsere Webseite",
       description: "Diese Webseite hier. Wir haben zu wenige Projekte also tun wir das rein hehe",
-      imageUrl: ""
+      imageUrl: website
     },
     {
       position: "top",
       height: 0.8,
       title: "Adventskalender am Annette-Gymnasium",
-      description: "Ein lustiges kleines Video, um Interesse für die Informatik zu erwecken",
-      imageUrl: ""
+      description: "Ein kleines Video, um Interesse für die Informatik zu erwecken",
+      imageUrl: adventskalender
     },
   ]
 
