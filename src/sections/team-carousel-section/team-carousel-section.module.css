@@ -3,10 +3,10 @@
 .grid {
 
   margin: auto;
-  width: fit-content;
-  padding: 100px 0;
-  display: grid;
-  grid-template-columns: repeat(5, 15vw);
+  align-items: center;
+  justify-content: center;
+  display: flex;
   gap: 80px;
+  flex-wrap: wrap;
 
 }

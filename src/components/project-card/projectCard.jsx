@@ -24,12 +24,13 @@ export const ProjectCard = ({
     <div 
       className={styles.projectCard} 
       style={{
-        backgroundImage: imageUrl,
         height: `${pHeight * 100}%`,
         [position]: 0
       }}
       onClick={() => onClick()}
     >
+      <div className={styles.mask}></div>
+      <img src={imageUrl} alt={`Foto von ${imageUrl}`} />
       <div className={styles.description}>
         <h3>{title}</h3>
         <p>
