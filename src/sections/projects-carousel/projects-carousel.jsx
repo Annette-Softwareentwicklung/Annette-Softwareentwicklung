@@ -12,6 +12,7 @@ import website from "./../../assets/images/projects/website.png"
 import adventskalender from "./../../assets/images/projects/adventskalender.png"
 import onlinebibliothek from "./../../assets/images/projects/onlinebibliothek.png"
 import svseite from "./../../assets/images/projects/svseite.png"
+import { fetchFromHyGraph } from "../../util"
 
 export const ProjectsCarousel = () => {
 
@@ -24,6 +25,7 @@ export const ProjectsCarousel = () => {
   const [cardWidth, setCardWidth] = useState(initialCardWidth)
   const [cardWidthIncrease, setCardWidthIncrease] = useState(initialCardIncrease) // um so viel wird die Karte größer wenn sie ausgewählt wird
   const [cardGap, setCardGap] = useState(initialCardGap)
+  const [projectData, setProjectData] = useState([])
   // me when Mathe-LK
   const offsetLeft = windowWidth / 2 - (selectedIndex * (cardWidth + cardGap) + (cardWidth + cardWidthIncrease) / 2)
 
@@ -41,71 +43,52 @@ export const ProjectsCarousel = () => {
 
 
   useEffect(() => {
+    
+    async function getProjects() {
+
+      const projects = await fetchFromHyGraph(`
+        query {
+          projekts {
+            titel
+            beschreibung
+            height
+            position
+            foto {
+              url
+            }
+          }
+        }
+      `) 
+
+      projects.json().then((json) => {
+        setProjectData(json.data.projekts)
+      })
+
+
+    }
+
+    getProjects()
+
     window.addEventListener("resize", setWindowEvent)
   
+
+
     return () => {
       window.removeEventListener("resize", setWindowEvent)
     }
   }, [null])
-  
-
-  // hier bitte alle Projekte als React Components reintun.
-
-  const allProjectsData = [
-    {
-      position: "top",
-      height: 0.85,
-      title: "Antragsformular Förderverein",
-      description: "Eine digitales Formular für den Förderverein. Papier sparen!",
-      imageUrl: onlineFormular
-    },
-    {
-      position: "bottom",
-      height: 0.8,
-      title: "Webseite der SV",
-      description: "Eine Webseite für die SV am Annette-Gymnasium.",
-      imageUrl: svseite
-    },
-    {
-      position: "top",
-      height: 1,
-      title: "Annette-App",
-      description: "Die Offizielle Applikation der Schule für Schülerinnen und Schüler",
-      imageUrl: annetteApp
-    },
-    {
-      position: "top",
-      height: 0.8,
-      title: "Online Lehrerbibliothek",
-      description: "Eine digitale Sammlung von Büchern am Annette für Lehrerinnen und Lehrer",
-      imageUrl: onlinebibliothek
-    },
-    {
-      position: "bottom",
-      height: 0.9,
-      title: "Unsere Webseite",
-      description: "Diese Webseite hier. Wir haben zu wenige Projekte also tun wir das rein hehe",
-      imageUrl: website
-    },
-    {
-      position: "top",
-      height: 0.8,
-      title: "Adventskalender am Annette-Gymnasium",
-      description: "Ein kleines Video, um Interesse für die Informatik zu erwecken",
-      imageUrl: adventskalender
-    },
-  ]
 
 
-  const allProjects = allProjectsData.map((entry, index) => {
+
+  const allProjects = projectData.map((entry, index) => {
     return <ProjectCard 
       key={index} 
       onClick={() => setSelectedIndex(index)}
       position={entry.position}
       pHeight={entry.height}
-      title={entry.title}
-      description={entry.description} 
-      imageUrl={entry.imageUrl}
+      title={entry.titel}
+      description={entry.beschreibung} 
+      imageUrl={entry.foto.url}
       selected={selectedIndex == index}
       width={cardWidth}
       widthIncrease={cardWidthIncrease}
@@ -151,7 +134,7 @@ export const ProjectsCarousel = () => {
           size={50} 
           weight="thin" 
           className={styles.caretRight} 
-          onClick={() => setSelectedIndex(Math.min(selectedIndex+1, allProjectsData.length - 1))}
+          onClick={() => setSelectedIndex(Math.min(selectedIndex+1, projectData.length - 1))}
         />
       </div>
 
